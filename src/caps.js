@@ -1,18 +1,16 @@
 'use strict';
 
 const eventPool = require('./event.js');
-const vendor = require('./vendor.js');
-const driver = require('./driver.js');
+require('./vendor.js');
+require('./driver.js');
 
 
 
 
-eventPool.on('pickup', driver.pickUpOrder);
+
 eventPool.on('pickup', pickUpReady);
-eventPool.on('in-transit', driver.inTransit);
-eventPool.on('pickup', enroute);
-eventPool.on('delivered', vendor.delivered);
-eventPool.on('pickup', deliveryComplete);
+eventPool.on('in-transit', enroute);
+eventPool.on('delivered', deliveryComplete);
 
 
 function pickUpReady(payload) {

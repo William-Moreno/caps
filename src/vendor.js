@@ -9,7 +9,7 @@ const Order = require('./orders.js');
 const OrderInterface = new Order();
 
 setInterval(() => {
-  let randOrderId = faker.finance.creditCardNumber();
+  let randOrderId = faker.finance.uuid();
   let randName = faker.name.findName();
   let randAddress = faker.address.streetAddress();
   let newOrder = OrderInterface.create(STORE, randOrderId, randName, randAddress);
@@ -17,11 +17,8 @@ setInterval(() => {
 }, 5000);
 
 
-function delivered(payload){
+eventPool.on('delivered', ((payload) => {
   let orderInfo = payload.order;
   console.log(`VENDOR: Thank you for delivering ${orderInfo.orderId}`);
-}
+}));
 
-module.exports = {
-  delivered,
-};
