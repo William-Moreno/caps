@@ -27,3 +27,9 @@ function deliveryComplete(payload) {
   let orderInfo = payload.order;
   console.log(`EVENT: {event: 'Order has been delivered', time: ${Date()}, payload: { store: ${orderInfo.storeName}, orderId: ${orderInfo.orderId}, customer: ${orderInfo.customerName}, address: ${orderInfo.address}}}`);
 }
+
+module.exports = {
+  pickUpReady,
+  enroute,
+  deliveryComplete,
+};

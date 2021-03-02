@@ -1,7 +1,8 @@
 'use strict';
 
-const vendor = require('../src/vendor.js');
-const driver = require('../src/driver.js');
+const hub = require('../src/caps.js');
+require('../src/vendor.js');
+require('../src/driver.js');
 
 //swap normal console.log with jest function
 console.log = jest.fn();
@@ -11,7 +12,7 @@ describe('Testing the vendor module', () => {
 
     let payload = { order: { storeName: 'The Stuff Store', orderId: '1234-5678-9012-3456', customerName: 'Alexis Riley', address: '987 Laurel Lane'}};
 
-    vendor.delivered(payload);
+    hub.pickUpReady(payload);
     expect(console.log).toHaveBeenCalled();
   });
 });
@@ -21,7 +22,7 @@ describe('Testing the driver module', () => {
 
     let payload = { order: { storeName: 'The Stuff Store', orderId: '1234-5678-9012-3456', customerName: 'Alexis Riley', address: '987 Laurel Lane'}};
 
-    driver.pickUpOrder(payload);
+    hub.enroute(payload);
     expect(console.log).toHaveBeenCalled();
   });
 
@@ -29,7 +30,7 @@ describe('Testing the driver module', () => {
 
     let payload = { order: { storeName: 'The Stuff Store', orderId: '1234-5678-9012-3456', customerName: 'Alexis Riley', address: '987 Laurel Lane'}};
 
-    driver.inTransit(payload);
+    hub.deliveryComplete(payload);
     expect(console.log).toHaveBeenCalled();
   });  
 });
