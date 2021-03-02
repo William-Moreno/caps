@@ -20,7 +20,6 @@ setInterval(() => {
 function delivered(payload){
   let orderInfo = payload.order;
   console.log(`VENDOR: Thank you for delivering ${orderInfo.orderId}`);
-  console.log(`EVENT: {event: 'delivered', time: ${Date()}, payload: { store: ${orderInfo.storeName}, orderId: ${orderInfo.orderId}, customer: ${orderInfo.customerName}, address: ${orderInfo.address}}}`);
 }
 
 module.exports = {
