@@ -49,4 +49,4 @@ Test suite generated to test event handlers:
 
 UML drawing created with [miro](https://miro.com/)
 
-![UML Diagram](./assets/lab11-uml.PNG)
+![UML Diagram](./assets/lab-11-uml.PNG)
