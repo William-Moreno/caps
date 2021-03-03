@@ -1,7 +1,6 @@
 'use strict';
 
 
-require('dotenv').config();
 const store = 'The Stuff Store';
 const faker = require('faker');
 const io = require('socket.io-client');
