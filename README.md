@@ -38,7 +38,7 @@ Lab 11 work was accomplished on the `events` branch. The pull request to merge t
 
 Lab 12 work was accomplished on the `socket.io` branch. The pull request to merge the code into the `main` branch is here:
 
-- [Pull Request](https://github.com/William-Moreno/caps/pull/1)
+- [Pull Request](https://github.com/William-Moreno/caps/pull/3)
 
 
 #### Lab 11 working features implemented:
