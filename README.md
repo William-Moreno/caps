@@ -26,8 +26,8 @@ run `npm install` in the terminal
 
 In three separate terminals navigate to caps directory and run the following commands in order:
 1. node /src/server/server.js
-1. node /src/vendor/client.js
 1. node /src/driver/client.js
+1. node /src/vendor/client.js
 
 
 ## Daily Pull Request

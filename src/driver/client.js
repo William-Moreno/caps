@@ -9,14 +9,17 @@ const capsServer = io.connect(capsURL);
 
 
 capsServer.on('pickup', (payload) => {
+  
   setTimeout(() => {
     console.log(`Picking up ${payload.order.orderId}`);
     payload.event = 'in-transit';
     capsServer.emit('in-transit', payload);
   }, 1500);
+
   setTimeout(() => {
     payload.event = 'delivered';
     capsServer.emit('delivered', payload);
   }, 3000);
+
 });
 
