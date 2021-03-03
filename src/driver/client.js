@@ -1,10 +1,10 @@
 'use strict';
 
 const io = require('socket.io-client');
-const hostURL = 'http://localhost:3000/';
+// const hostURL = 'http://localhost:3000/';
 const capsURL = 'http://localhost:3000/caps';
 
-const socket = io.connect(hostURL);
+// const socket = io.connect(hostURL);
 const capsServer = io.connect(capsURL);
 
 
