@@ -2,7 +2,7 @@
 
 
 require('dotenv').config();
-const STORE = process.env.STORENAME;
+const store = process.env.STORENAME;
 const faker = require('faker');
 const io = require('socket.io-client');
 const hostURL = 'http://localhost:3000/';
