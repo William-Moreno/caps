@@ -62,7 +62,7 @@ Lab 13 work was accomplished on the `queue` branch. The pull request to merge th
 - Removed files created in lab 11
 
 #### Lab 13 working features implemented:
-- Created the `undeliveredMessages` queue object with keys of `pickup`, `inTransit` and `delivered`
+- Created the `undeliveredQueue` queue object with keys of `pickup`, `inTransit` and `delivered`
 - Created `queue-server.js` in server folder
 - Created `1-206-flowers.js` and `acme-widgets.js` in vendor folder
 - Refactored lab 12 code into new files and implemented queue object and to store and deliver unreceived messages/events to vendors (delivered) and driver (pickup and in-transit)
