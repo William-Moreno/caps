@@ -1,5 +1,33 @@
 'use strict';
 
+class Queue {
+  constructor(storeName) {
+    this.payload = {
+      event: 'pickup',
+      time: Date(),
+      clientId: storeName,
+      messageId: faker.random.uuid(),
+      order: {
+        orderId: faker.random.uuid(),
+        name: faker.name.findName(),
+        address: `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()} ${faker.address.zipCode()}`,
+      },
+    },
+  
+
+
+    subscribe(orderEvent){
+      socket.on(orderEvent, )
+
+    }
+
+    trigger(event){
+
+    }
+
+  }
+}
+
 
 const store = process.argv[2];
 const faker = require('faker');

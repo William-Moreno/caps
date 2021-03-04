@@ -1,7 +1,6 @@
 'use strict';
 
-
-const store = process.argv[2];
+const store = 'acme-widgets';
 const faker = require('faker');
 const io = require('socket.io-client');
 const capsURL = 'http://localhost:3000/caps';
@@ -29,7 +28,7 @@ socket.on('delivered', (payload) => {
 
   if(payload.clientId === store){
     socket.emit('received', payload);
-    console.log(`Thank you for delivering ${payload.order.orderId}`);
+    console.log(`Widgets were delivered - ${payload.order.orderId}`);
   }
   
 });
